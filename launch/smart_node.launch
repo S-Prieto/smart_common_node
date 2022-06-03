@@ -1,0 +1,23 @@
+<!-- Starts up everything needed to run the example listener/talker Python nodes. -->
+<launch>
+  <!-- Arguments to allow changing common parameters from the command line or when including this file from other launch files. -->
+  <arg name="rate" default="1.0"/>
+
+  <!-- The talker node will publish a custom message. -->
+  <node pkg="smart_common_node" type="import_module_node.py" name="smart_talker" output="screen">
+    <!-- We can define some of the input arguments -->
+    <param name="~rate" value="$(arg rate)"/>
+    <param name="~message" value="Message from launch file"/>
+    <param name="~a" value="10"/>
+    <!-- Or remap some of the parameters that are not defined as arguments -->
+    <remap from="smart_topic" to="chatter"/>
+  </node>
+
+  <!-- The listener node subscribes to the custom message that talker is publishing. -->
+  <node pkg="smart_common_node" type="smart_listener.py" name="smart_listener" output="screen">
+    <remap from="smart_topic" to="chatter"/>
+  </node>
+
+  <!-- We can include some other launch files -->
+  <include file="$(find smart_common_node)/launch/tools.launch"/>
+</launch>

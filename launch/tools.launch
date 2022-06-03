@@ -1,0 +1,8 @@
+<!-- Tools to change and view the output. -->
+<launch>
+  <!-- Start up the dynamic reconfigure GUI. -->
+  <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure"/>
+
+  <!-- Start up rqt_console so we can see the output of listener. (if not set to output to screen) -->
+  <node pkg="rqt_console" type="rqt_console" name="rqt_console"/>
+</launch>
