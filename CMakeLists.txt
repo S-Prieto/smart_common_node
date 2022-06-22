@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(smart_common_node)
+project(smart_python_ros_node)
 
 
 find_package(catkin REQUIRED COMPONENTS

@@ -4,7 +4,7 @@
 import rospy
 
 # Msg, srv and cfg imports:
-from smart_common_node.msg import smartCommonData
+from smart_python_ros_node.msg import smartCommonData
 
 # Define some light methods and callbacks. For heavy stuff, use modules and classes.
 def callback(data):

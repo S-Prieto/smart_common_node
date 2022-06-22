@@ -8,8 +8,8 @@ from dynamic_reconfigure.server import Server as DynamicReconfigureServer
 
 # Msg, srv and cfg imports:
 from std_msgs.msg import String
-from smart_common_node.msg import smartCommonData
-from smart_common_node.cfg import smartCommonConfig as ConfigType
+from smart_python_ros_node.msg import smartCommonData
+from smart_python_ros_node.cfg import smartCommonConfig as ConfigType
 
 # Everything should be in a class structure, with at least three 
 # methods: init, start, stop and reconfigure
